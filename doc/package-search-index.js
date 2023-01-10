@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"cz.cuni.mff.souradat.spellcheck"},{"l":"cz.cuni.mff.souradat.spellcheck.lexicon"},{"l":"cz.cuni.mff.souradat.spellcheck.shell"},{"l":"cz.cuni.mff.souradat.spellcheck.spellchecker"},{"l":"cz.cuni.mff.souradat.spellcheck.trie"}];updateSearchResults();

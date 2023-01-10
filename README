@@ -1,0 +1,39 @@
+Spell checker
+
+Console application for checking and correcting of misspelled words in a text
+using a lexicon of known word forms.
+If it find a misspelled word (unknown word form), tries to find the closest
+known forms.
+Interactive mode allows adding new word forms to the lexicon.
+
+To run the program:
+in the directory src, run command
+`make run`
+which downloads the MorfFlex file, which is used as a dictionary of known word
+forms, as well as a e-book, which can be used for testing the usage. It also
+builds the the *.class files and runs the program with 11Gb of RAM memory for
+the process.
+
+After starting the program, you have to wait several minutes (~ 12 minutes for
+the first run, ~ 5 for the next runs) until the lexicon is built/loaded.
+
+Then you get to an interactive shell with several commands:
+help: Print this help
+        Example usage: help
+exit: Exits the program
+        Example usage: exit
+check: Check the given file and report unknown words in the second file.
+        Example usage: check inputFilename outputFilename
+correct: Correct a given file and report unknown words and the suggestions to the second
+        Example usage: correct inputFilename outputFilename
+add: Adds the given form to the lexicon of known words.
+        Example usage: add novéslovíčko
+alter: Suggest alternations of the given form. Find `n` closest known words.
+        Example usage: alter divnoslovo 5
+has: Checks, whether a given form is in the lexion or not.
+        Example usage: has předivnéslovo
+
+Instead of running the program interactively, you can feed it with some input
+commands, if they are correctly separated by newlines.
+
+The documentation can be found in the directory doc.
