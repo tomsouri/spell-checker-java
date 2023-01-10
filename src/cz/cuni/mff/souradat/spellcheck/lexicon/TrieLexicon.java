@@ -12,8 +12,8 @@ import cz.cuni.mff.souradat.spellcheck.trie.Trie;
  * @see cz.cuni.mff.souradat.spellcheck.trie.Trie
  */
 public class TrieLexicon implements ILexicon {
-    private static final String serializedFilename = "trielexicon.ser";
-    private static final String morfflexFilename = "czech-morfflex-2.0.tsv";
+    private static final String serializedFilename = "data/trielexicon.ser";
+    private static final String morfflexFilename = "data/czech-morfflex-2.0.tsv";
 
     private Trie lexicon;
 

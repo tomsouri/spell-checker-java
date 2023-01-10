@@ -1,9 +1,9 @@
 SHELL = /bin/bash
 
-morfflex-xz = czech-morfflex-2.0.tsv.xz
-morfflex = czech-morfflex-2.0.tsv
+morfflex-xz = data/czech-morfflex-2.0.tsv.xz
+morfflex = data/czech-morfflex-2.0.tsv
 
-book = book.txt
+book = data/book.txt
 
 $(morfflex-xz):
 	# Download morfflex 2.0 from the official repository
@@ -29,12 +29,12 @@ myclear:
 
 recompile: myclear
 	echo "Compiling the java files."
-	javac cz/cuni/mff/souradat/spellcheck/Main.java
+	javac -cp src src/cz/cuni/mff/souradat/spellcheck/Main.java
 	echo "Done."
 
 run: recompile $(morfflex) $(book)
 	echo "Running the main shell of the program..."
-	java -Xmx11g cz.cuni.mff.souradat.spellcheck.Main
+	java -cp src -Xmx11g cz.cuni.mff.souradat.spellcheck.Main
 
 clean:
 	rm $(book)
