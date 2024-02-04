@@ -104,8 +104,10 @@ public class Shell {
         }
         else{
             console.printf(commands.get(0).execute() + "\n");
-            while(true){
-                String line = console.readLine("> ");
+            String line;
+            //
+            while((line = console.readLine("> ")!= null)){
+                //String (line = console.readLine("> "));
                 String result = processLine(line);
                 if (result == null){continue;}
                     else{
